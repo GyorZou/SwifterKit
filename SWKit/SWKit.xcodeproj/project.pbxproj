@@ -41,6 +41,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C05D65A1F483BEB006EF865 /* SWPullRefresher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SWPullRefresher;
+			sourceTree = "<group>";
+		};
 		4C6C00C01F48333A007B0E0A = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +71,7 @@
 				4C6C00CE1F48333A007B0E0A /* ViewController.swift */,
 				4C4A81A51F48394A00848251 /* TestViewController.swift */,
 				4C4A81A61F48394A00848251 /* TestViewController.xib */,
+				4C05D65A1F483BEB006EF865 /* SWPullRefresher */,
 				4C6C00DE1F48337C007B0E0A /* SWPagerController */,
 				4C6C00D01F48333A007B0E0A /* Main.storyboard */,
 				4C6C00D31F48333A007B0E0A /* Assets.xcassets */,
