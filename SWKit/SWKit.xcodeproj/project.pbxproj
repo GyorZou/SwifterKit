@@ -19,6 +19,7 @@
 		52A815DD1F49BF3E00909F3A /* SWInfiniteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A815DC1F49BF3E00909F3A /* SWInfiniteImageView.swift */; };
 		52A815E01F49C4FA00909F3A /* index_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52A815DE1F49C4FA00909F3A /* index_3.jpg */; };
 		52A815E11F49C4FA00909F3A /* index_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52A815DF1F49C4FA00909F3A /* index_2.jpg */; };
+		52A815E31F4B17DC00909F3A /* SWRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A815E21F4B17DC00909F3A /* SWRefresher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		52A815DC1F49BF3E00909F3A /* SWInfiniteImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWInfiniteImageView.swift; sourceTree = "<group>"; };
 		52A815DE1F49C4FA00909F3A /* index_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = index_3.jpg; sourceTree = "<group>"; };
 		52A815DF1F49C4FA00909F3A /* index_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = index_2.jpg; sourceTree = "<group>"; };
+		52A815E21F4B17DC00909F3A /* SWRefresher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWRefresher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		52A815D81F492F4B00909F3A /* SWPullRefresher */ = {
 			isa = PBXGroup;
 			children = (
+				52A815E21F4B17DC00909F3A /* SWRefresher.swift */,
 			);
 			path = SWPullRefresher;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A815E31F4B17DC00909F3A /* SWRefresher.swift in Sources */,
 				52A815DD1F49BF3E00909F3A /* SWInfiniteImageView.swift in Sources */,
 				4C6C00E01F483388007B0E0A /* SWPagerViewController.swift in Sources */,
 				4C6C00CF1F48333A007B0E0A /* ViewController.swift in Sources */,
