@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C05D65D1F4A7F40006EF865 /* UIViewExtension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C05D65C1F4A7F40006EF865 /* UIViewExtension .swift */; };
 		4C4A81A71F48394A00848251 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A81A51F48394A00848251 /* TestViewController.swift */; };
 		4C4A81A81F48394A00848251 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A81A61F48394A00848251 /* TestViewController.xib */; };
 		4C6C00CD1F48333A007B0E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C00CC1F48333A007B0E0A /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C05D65C1F4A7F40006EF865 /* UIViewExtension .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewExtension .swift"; sourceTree = "<group>"; };
 		4C4A81A51F48394A00848251 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		4C4A81A61F48394A00848251 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		4C6C00C91F48333A007B0E0A /* SWKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C05D65B1F4A7F2C006EF865 /* UIViewExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4C05D65C1F4A7F40006EF865 /* UIViewExtension .swift */,
+			);
+			path = UIViewExtension;
+			sourceTree = "<group>";
+		};
 		4C6C00C01F48333A007B0E0A = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 				4C6C00CE1F48333A007B0E0A /* ViewController.swift */,
 				4C4A81A51F48394A00848251 /* TestViewController.swift */,
 				4C4A81A61F48394A00848251 /* TestViewController.xib */,
+				4C05D65B1F4A7F2C006EF865 /* UIViewExtension */,
 				52A815D81F492F4B00909F3A /* SWPullRefresher */,
 				52A815D91F492F4B00909F3A /* SWInfiniteScrollView */,
 				4C6C00DE1F48337C007B0E0A /* SWPagerController */,
@@ -185,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A815DD1F49BF3E00909F3A /* SWInfiniteImageView.swift in Sources */,
+				4C05D65D1F4A7F40006EF865 /* UIViewExtension .swift in Sources */,
 				4C6C00E01F483388007B0E0A /* SWPagerViewController.swift in Sources */,
 				4C6C00CF1F48333A007B0E0A /* ViewController.swift in Sources */,
 				52A815DB1F492F6200909F3A /* SWInfiniteScrollView.swift in Sources */,

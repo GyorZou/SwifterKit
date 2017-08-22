@@ -18,6 +18,8 @@ protocol SWInfiniteScrollViewDelegate: NSObjectProtocol {
 
 class SWInfiniteScrollView: UIView {
     
+    fileprivate var dequeueViews: [UIView] = []
+    
     fileprivate(set) var pageCount: Int = 3
     fileprivate var scrollView = UIScrollView()
     var tapAble = true
@@ -27,8 +29,64 @@ class SWInfiniteScrollView: UIView {
     
     fileprivate let tap = UITapGestureRecognizer()
     
+    override var frame: CGRect{
+        didSet{
+            scrollView.frame = self.bounds
+            
+            self.reloadData()
+        }
+    }
+   
     
     weak var infiniteDelegate: SWInfiniteScrollViewDelegate?
+    
+    func dequeueReusableView() -> UIView? {
+        if let first = dequeueViews.first {
+            dequeueViews.removeFirst()
+            return first
+        }
+        return nil
+    }
+    func reloadData(){
+        guard let view = visibleView else {
+            return
+        }
+        scrollView.delegate = self
+        self.addSubview(scrollView)
+        for child in visibleViews {
+            child.removeFromSuperview()
+        }
+        
+        scrollView.removeGestureRecognizer(tap)
+        
+        tap.addTarget(self, action: #selector(doTap))
+        scrollView.addGestureRecognizer(tap)
+        
+        visibleViews.removeAll()
+        
+        self.scrollView.isPagingEnabled = true
+        self.scrollView.showsHorizontalScrollIndicator = false
+        
+        
+        let size = self.frame.size
+        view.frame = CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: size)
+        scrollView.addSubview(view)
+        
+        visibleViews.append(view)
+        
+        
+        self.placeView(before: view)
+        
+        self.placeView(after: view)
+        
+        self.positonVisibleViews(center: view)
+        
+        
+        self.scrollView.contentSize = CGSize.init(width: CGFloat(visibleViews.count) * self.frame.width, height: self.frame.height)
+        
+        
+       self.scrollView.setContentOffset(CGPoint.init(x: view.frame.origin.x, y: 0), animated: false)
+    }
     
     func doTap() {
         if tapAble == false  || self.scrollView.isDecelerating {
@@ -87,37 +145,9 @@ class SWInfiniteScrollView: UIView {
     
     func setVisible(view: UIView,animated: Bool) {
         
-        for child in visibleViews {
-            child.removeFromSuperview()
-        }
-        self.removeGestureRecognizer(tap)
-        
-        tap.addTarget(self, action: #selector(doTap))
-        self.addGestureRecognizer(tap)
-        
-        visibleViews.removeAll()
-        
-        self.scrollView.isPagingEnabled = true
-        self.scrollView.showsHorizontalScrollIndicator = false
-        
-        
-        let size = self.frame.size
-        view.frame = CGRect.init(origin: CGPoint.init(x: 0, y: 0), size: size)
-        self.addSubview(view)
-        
-        visibleViews.append(view)
-        
-        
-        self.placeView(before: view)
-        
-        self.placeView(after: view)
-        
-        self.positonVisibleViews(center: view)
-
-        
-        self.scrollView.contentSize = CGSize.init(width: CGFloat(visibleViews.count) * self.frame.width, height: self.frame.height)
-        
-        self.scrollView.setContentOffset(CGPoint.init(x: view.frame.origin.x, y: 0), animated: false)
+        visibleView = view
+      
+        reloadData()
         
     }
     
@@ -154,7 +184,7 @@ class SWInfiniteScrollView: UIView {
         before.frame = frame
         visibleViews.insert(before, at: 0)
         
-        self.addSubview(before)
+        scrollView.addSubview(before)
         return true
     }
     @discardableResult
@@ -169,7 +199,7 @@ class SWInfiniteScrollView: UIView {
         nextView.frame = frame
         
         visibleViews.append(nextView)
-        self.addSubview(nextView)
+        scrollView.addSubview(nextView)
         return true
 
     }
@@ -220,8 +250,11 @@ class SWInfiniteScrollView: UIView {
                     }
                     if self.placeView(after: last) {
                         //加了一个就请删除一个
-                        visibleViews.first?.removeFromSuperview()
-                        visibleViews.removeFirst()
+                        if let first = visibleViews.first {
+                            first.removeFromSuperview()
+                            visibleViews.removeFirst()
+                            dequeueViews.append(first)
+                        }
                         
                         //左侧滑动一个宽度
                         moveX(value: -w)
@@ -239,8 +272,12 @@ class SWInfiniteScrollView: UIView {
                 }
                 if first.frame.origin.x >= 0 {
                     if self.placeView(before: first) {
-                        visibleViews.last?.removeFromSuperview()
-                        visibleViews.removeLast()
+                        if let last = visibleViews.last {
+                            last.removeFromSuperview()
+                            visibleViews.removeLast()
+                            dequeueViews.append(last)
+                        }
+                        
                         moveX(value: w)
                         
                         
@@ -249,4 +286,12 @@ class SWInfiniteScrollView: UIView {
             }
         }
     }
+}
+
+extension SWInfiniteScrollView: UIScrollViewDelegate
+{
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.setNeedsLayout()
+    }
+
 }
