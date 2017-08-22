@@ -10,9 +10,26 @@ import UIKit
 
 class ViewController: UIViewController ,SWInfiniteScrollViewDelegate{
 
+    var  scroll:UIScrollView?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.edgesForExtendedLayout = []
+        
+        scroll = UIScrollView.init(frame: self.view.bounds)
+        scroll?.contentSize = CGSize.init(width: 0, height: 900)
+        let head = SWRefresherBaseHeader.init {[unowned self] (scrollView) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5){
+                self.scroll?.sw_header?.endRefresh()
+            }
+
+        }
+
+        
+        head.backgroundColor = UIColor.red
+        scroll?.sw_header = head
+        self.view .addSubview(scroll!)
+        return;
         let infinite = SWInfiniteScrollView.init(frame: self.view.bounds)
         
         infinite.infiniteDelegate = self
