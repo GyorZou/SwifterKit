@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C05D65D1F4A7F40006EF865 /* UIViewExtension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C05D65C1F4A7F40006EF865 /* UIViewExtension .swift */; };
+		4C4A750D1F4D62FF00093CFB /* SWInfiniteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A75051F4D62FF00093CFB /* SWInfiniteImageView.swift */; };
+		4C4A750E1F4D62FF00093CFB /* SWInfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A75061F4D62FF00093CFB /* SWInfiniteScrollView.swift */; };
+		4C4A750F1F4D62FF00093CFB /* SWPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A75081F4D62FF00093CFB /* SWPagerViewController.swift */; };
+		4C4A75101F4D62FF00093CFB /* SWRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A750A1F4D62FF00093CFB /* SWRefresher.swift */; };
+		4C4A75111F4D62FF00093CFB /* SWUIViewExtension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A750C1F4D62FF00093CFB /* SWUIViewExtension .swift */; };
 		4C4A81A71F48394A00848251 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A81A51F48394A00848251 /* TestViewController.swift */; };
 		4C4A81A81F48394A00848251 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A81A61F48394A00848251 /* TestViewController.xib */; };
 		4C6C00CD1F48333A007B0E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C00CC1F48333A007B0E0A /* AppDelegate.swift */; };
@@ -15,16 +19,16 @@
 		4C6C00D21F48333A007B0E0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6C00D01F48333A007B0E0A /* Main.storyboard */; };
 		4C6C00D41F48333A007B0E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6C00D31F48333A007B0E0A /* Assets.xcassets */; };
 		4C6C00D71F48333A007B0E0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6C00D51F48333A007B0E0A /* LaunchScreen.storyboard */; };
-		4C6C00E01F483388007B0E0A /* SWPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C00DF1F483388007B0E0A /* SWPagerViewController.swift */; };
-		52A815DB1F492F6200909F3A /* SWInfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A815DA1F492F6200909F3A /* SWInfiniteScrollView.swift */; };
-		52A815DD1F49BF3E00909F3A /* SWInfiniteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A815DC1F49BF3E00909F3A /* SWInfiniteImageView.swift */; };
 		52A815E01F49C4FA00909F3A /* index_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52A815DE1F49C4FA00909F3A /* index_3.jpg */; };
 		52A815E11F49C4FA00909F3A /* index_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52A815DF1F49C4FA00909F3A /* index_2.jpg */; };
-		52A815E31F4B17DC00909F3A /* SWRefresher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A815E21F4B17DC00909F3A /* SWRefresher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C05D65C1F4A7F40006EF865 /* UIViewExtension .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewExtension .swift"; sourceTree = "<group>"; };
+		4C4A75051F4D62FF00093CFB /* SWInfiniteImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWInfiniteImageView.swift; sourceTree = "<group>"; };
+		4C4A75061F4D62FF00093CFB /* SWInfiniteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWInfiniteScrollView.swift; sourceTree = "<group>"; };
+		4C4A75081F4D62FF00093CFB /* SWPagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPagerViewController.swift; sourceTree = "<group>"; };
+		4C4A750A1F4D62FF00093CFB /* SWRefresher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWRefresher.swift; sourceTree = "<group>"; };
+		4C4A750C1F4D62FF00093CFB /* SWUIViewExtension .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SWUIViewExtension .swift"; sourceTree = "<group>"; };
 		4C4A81A51F48394A00848251 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		4C4A81A61F48394A00848251 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		4C6C00C91F48333A007B0E0A /* SWKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,12 +38,8 @@
 		4C6C00D31F48333A007B0E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C6C00D61F48333A007B0E0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C6C00D81F48333A007B0E0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C6C00DF1F483388007B0E0A /* SWPagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPagerViewController.swift; sourceTree = "<group>"; };
-		52A815DA1F492F6200909F3A /* SWInfiniteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWInfiniteScrollView.swift; sourceTree = "<group>"; };
-		52A815DC1F49BF3E00909F3A /* SWInfiniteImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWInfiniteImageView.swift; sourceTree = "<group>"; };
 		52A815DE1F49C4FA00909F3A /* index_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = index_3.jpg; sourceTree = "<group>"; };
 		52A815DF1F49C4FA00909F3A /* index_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = index_2.jpg; sourceTree = "<group>"; };
-		52A815E21F4B17DC00909F3A /* SWRefresher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWRefresher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +53,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C05D65B1F4A7F2C006EF865 /* UIViewExtension */ = {
+		4C4A75031F4D62FF00093CFB /* SwiftKit */ = {
 			isa = PBXGroup;
 			children = (
-				4C05D65C1F4A7F40006EF865 /* UIViewExtension .swift */,
+				4C4A75041F4D62FF00093CFB /* SWInfiniteScrollView */,
+				4C4A75071F4D62FF00093CFB /* SWPagerController */,
+				4C4A75091F4D62FF00093CFB /* SWPullRefresher */,
+				4C4A750B1F4D62FF00093CFB /* UIViewExtension */,
+			);
+			path = SwiftKit;
+			sourceTree = "<group>";
+		};
+		4C4A75041F4D62FF00093CFB /* SWInfiniteScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A75051F4D62FF00093CFB /* SWInfiniteImageView.swift */,
+				4C4A75061F4D62FF00093CFB /* SWInfiniteScrollView.swift */,
+			);
+			path = SWInfiniteScrollView;
+			sourceTree = "<group>";
+		};
+		4C4A75071F4D62FF00093CFB /* SWPagerController */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A75081F4D62FF00093CFB /* SWPagerViewController.swift */,
+			);
+			path = SWPagerController;
+			sourceTree = "<group>";
+		};
+		4C4A75091F4D62FF00093CFB /* SWPullRefresher */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A750A1F4D62FF00093CFB /* SWRefresher.swift */,
+			);
+			path = SWPullRefresher;
+			sourceTree = "<group>";
+		};
+		4C4A750B1F4D62FF00093CFB /* UIViewExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A750C1F4D62FF00093CFB /* SWUIViewExtension .swift */,
 			);
 			path = UIViewExtension;
 			sourceTree = "<group>";
@@ -84,11 +120,8 @@
 				4C6C00CE1F48333A007B0E0A /* ViewController.swift */,
 				4C4A81A51F48394A00848251 /* TestViewController.swift */,
 				4C4A81A61F48394A00848251 /* TestViewController.xib */,
-				4C05D65B1F4A7F2C006EF865 /* UIViewExtension */,
-				52A815D81F492F4B00909F3A /* SWPullRefresher */,
-				52A815D91F492F4B00909F3A /* SWInfiniteScrollView */,
-				4C6C00DE1F48337C007B0E0A /* SWPagerController */,
 				4C6C00D01F48333A007B0E0A /* Main.storyboard */,
+				4C4A75031F4D62FF00093CFB /* SwiftKit */,
 				4C6C00D31F48333A007B0E0A /* Assets.xcassets */,
 				52A815DE1F49C4FA00909F3A /* index_3.jpg */,
 				52A815DF1F49C4FA00909F3A /* index_2.jpg */,
@@ -96,31 +129,6 @@
 				4C6C00D81F48333A007B0E0A /* Info.plist */,
 			);
 			path = SWKit;
-			sourceTree = "<group>";
-		};
-		4C6C00DE1F48337C007B0E0A /* SWPagerController */ = {
-			isa = PBXGroup;
-			children = (
-				4C6C00DF1F483388007B0E0A /* SWPagerViewController.swift */,
-			);
-			path = SWPagerController;
-			sourceTree = "<group>";
-		};
-		52A815D81F492F4B00909F3A /* SWPullRefresher */ = {
-			isa = PBXGroup;
-			children = (
-				52A815E21F4B17DC00909F3A /* SWRefresher.swift */,
-			);
-			path = SWPullRefresher;
-			sourceTree = "<group>";
-		};
-		52A815D91F492F4B00909F3A /* SWInfiniteScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				52A815DA1F492F6200909F3A /* SWInfiniteScrollView.swift */,
-				52A815DC1F49BF3E00909F3A /* SWInfiniteImageView.swift */,
-			);
-			path = SWInfiniteScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,13 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52A815E31F4B17DC00909F3A /* SWRefresher.swift in Sources */,
-				52A815DD1F49BF3E00909F3A /* SWInfiniteImageView.swift in Sources */,
-				4C05D65D1F4A7F40006EF865 /* UIViewExtension .swift in Sources */,
-				4C6C00E01F483388007B0E0A /* SWPagerViewController.swift in Sources */,
+				4C4A750F1F4D62FF00093CFB /* SWPagerViewController.swift in Sources */,
+				4C4A750E1F4D62FF00093CFB /* SWInfiniteScrollView.swift in Sources */,
 				4C6C00CF1F48333A007B0E0A /* ViewController.swift in Sources */,
-				52A815DB1F492F6200909F3A /* SWInfiniteScrollView.swift in Sources */,
+				4C4A75111F4D62FF00093CFB /* SWUIViewExtension .swift in Sources */,
 				4C4A81A71F48394A00848251 /* TestViewController.swift in Sources */,
+				4C4A750D1F4D62FF00093CFB /* SWInfiniteImageView.swift in Sources */,
+				4C4A75101F4D62FF00093CFB /* SWRefresher.swift in Sources */,
 				4C6C00CD1F48333A007B0E0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
