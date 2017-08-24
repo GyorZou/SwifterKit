@@ -16,7 +16,7 @@ protocol SWInfiniteScrollViewDelegate: NSObjectProtocol {
     func infiniteView(_ scrollView: SWInfiniteScrollView,didScrollTo view: UIView)
 }
 
-class SWInfiniteScrollView: UIView {
+public class SWInfiniteScrollView: UIView {
     
     fileprivate var dequeueViews: [UIView] = []
     
@@ -29,7 +29,7 @@ class SWInfiniteScrollView: UIView {
     
     fileprivate let tap = UITapGestureRecognizer()
     
-    override var frame: CGRect{
+    override public var frame: CGRect{
         didSet{
             scrollView.frame = self.bounds
             
@@ -47,7 +47,7 @@ class SWInfiniteScrollView: UIView {
         }
         return nil
     }
-    func reloadData(){
+ public   func reloadData(){
         guard let view = visibleView else {
             return
         }
@@ -207,7 +207,7 @@ class SWInfiniteScrollView: UIView {
     
     
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         
         super.layoutSubviews()
         
@@ -290,7 +290,7 @@ class SWInfiniteScrollView: UIView {
 
 extension SWInfiniteScrollView: UIScrollViewDelegate
 {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.setNeedsLayout()
     }
 

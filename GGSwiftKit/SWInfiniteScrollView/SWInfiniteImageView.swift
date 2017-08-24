@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SWInfiniteImageView: SWInfiniteScrollView,SWInfiniteScrollViewDelegate {
+public class SWInfiniteImageView: SWInfiniteScrollView,SWInfiniteScrollViewDelegate {
 
     var interval: TimeInterval = 5
     
@@ -54,7 +54,7 @@ class SWInfiniteImageView: SWInfiniteScrollView,SWInfiniteScrollViewDelegate {
             self.setVisible(view: view, animated: false)
         }
     }
-    override var frame: CGRect{
+    override public var frame: CGRect{
         didSet{
             indicator.width = self.width
             indicator.y = self.height - 30
@@ -63,7 +63,7 @@ class SWInfiniteImageView: SWInfiniteScrollView,SWInfiniteScrollViewDelegate {
         }
     }
     
-    override func willMove(toSuperview newSuperview: UIView?) {
+    override public func willMove(toSuperview newSuperview: UIView?) {
         timer?.invalidate()
         timer = nil
 
@@ -103,7 +103,7 @@ class SWInfiniteImageView: SWInfiniteScrollView,SWInfiniteScrollViewDelegate {
         return imageView
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         self.bringSubview(toFront: indicator)
     }
