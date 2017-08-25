@@ -37,14 +37,14 @@ extension SWRefresherState: Equatable{
 }
 
 
-class SWRefresherBaseView: UIView {
+public class SWRefresherBaseView: UIView {
     
     fileprivate(set) var state = SWRefresherState.Idle
     var contentHeight: CGFloat = 60
     weak fileprivate var scrollView: UIScrollView?
     var originContentInset = UIEdgeInsets.zero
 
-    override func willMove(toSuperview newSuperview: UIView?) {
+  public  override func willMove(toSuperview newSuperview: UIView?) {
         self.removeObeser()
         
         guard  let view = newSuperview as? UIScrollView else {
@@ -80,7 +80,7 @@ class SWRefresherBaseView: UIView {
     func setState(_ stateT: SWRefresherState) {
     }
 
-    func endRefresh()  {
+   public  func endRefresh()  {
         switch state {
             case .Freshing:
                 setState(.Idle)
@@ -91,9 +91,9 @@ class SWRefresherBaseView: UIView {
 }
 
 
-class SWRefresherBaseHeader: SWRefresherBaseView {
+public class SWRefresherBaseHeader: SWRefresherBaseView {
     
-    typealias ActionBlock = (UIScrollView) -> Void
+   public  typealias ActionBlock = (UIScrollView) -> Void
     private var _titleLabel: UILabel?
     private var actionBlock: ActionBlock?
     
@@ -115,12 +115,12 @@ class SWRefresherBaseHeader: SWRefresherBaseView {
         }
     }
 
-     init(action: ActionBlock? = nil) {
+   public  init(action: ActionBlock? = nil) {
         super.init(frame: CGRect.zero)
         self.actionBlock = action
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -207,7 +207,7 @@ class SWRefresherBaseHeader: SWRefresherBaseView {
 
 
 extension UIScrollView {
-    var sw_header: SWRefresherBaseHeader?{
+  public  var sw_header: SWRefresherBaseHeader?{
         set{
             self.findHeader()?.removeFromSuperview()
             

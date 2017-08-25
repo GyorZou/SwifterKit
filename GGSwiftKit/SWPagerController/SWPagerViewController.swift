@@ -8,11 +8,7 @@
 
 import UIKit
 
-
-
-
-
-protocol SWPagerViewHeaderDelegate: NSObjectProtocol {
+public protocol SWPagerViewHeaderDelegate: NSObjectProtocol {
      func pagerViewController(_ pager: SWPagerViewController,willTransitionTo vc:UIViewController)
     
      func pagerViewTabHeader() -> UIView?
@@ -30,7 +26,7 @@ class SWPagerItem: NSObject {
     }
 }
 
-class SWPagerConfig: NSObject {
+public class SWPagerConfig: NSObject {
     
     var items: [SWPagerItem] = [SWPagerItem.init(UIViewController(), title: "Item")]
     
@@ -53,7 +49,7 @@ class SWPagerConfig: NSObject {
 
 
 
-class SWPagerViewController: UIViewController {
+public class SWPagerViewController: UIViewController {
   
 
 
@@ -69,13 +65,13 @@ class SWPagerViewController: UIViewController {
     }()
     fileprivate var isInitial = false
    
-    var config: SWPagerConfig = SWPagerConfig() {
+ public   var config: SWPagerConfig = SWPagerConfig() {
         didSet{
             self.reloadData()
         }
     }
     
-    func reloadData()  {
+  public  func reloadData()  {
         if isInitial == false {
             return
         }
@@ -111,7 +107,7 @@ class SWPagerViewController: UIViewController {
         }
     }
     
-      override func viewDidLoad() {
+    public  override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.white
@@ -136,7 +132,7 @@ class SWPagerViewController: UIViewController {
     }
 
     @discardableResult
-    func setSelect(_ index: Int, animated: Bool) -> Bool {
+   public func setSelect(_ index: Int, animated: Bool) -> Bool {
         let count = config.items.count
         guard count > index , index != _selectedIndex else {
             return false
@@ -153,7 +149,7 @@ class SWPagerViewController: UIViewController {
     }
     
 
-    override func didReceiveMemoryWarning() {
+  public  override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -162,9 +158,9 @@ class SWPagerViewController: UIViewController {
 
 
 }
-extension SWPagerViewController: SWPagerViewHeaderDelegate
+ extension SWPagerViewController: SWPagerViewHeaderDelegate
 {
-    func pagerViewController(_ pager: SWPagerViewController, willTransitionTo vc: UIViewController) {
+  public  func pagerViewController(_ pager: SWPagerViewController, willTransitionTo vc: UIViewController) {
         //tab要滚动到xxx位置
         //let childs = self.tabView?.subviews
         let index = indexOf(vc: vc)
@@ -172,16 +168,16 @@ extension SWPagerViewController: SWPagerViewHeaderDelegate
         
     }
     
-    func pagerViewTabDidSelectd(index: Int) {
+  public  func pagerViewTabDidSelectd(index: Int) {
         self.setSelect(index, animated: true)
     }
     
-    func pagerViewTabHeader() -> UIView? {
+  public  func pagerViewTabHeader() -> UIView? {
         
         return self.defaultTabHeader()
     }
     
-    func defaultTabHeader() -> UIView? {
+  public  func defaultTabHeader() -> UIView? {
         let view = UIView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height:  config.tabHeight))
         view.backgroundColor = config.tabBackgroundColor
         
@@ -296,17 +292,17 @@ extension SWPagerViewController: UIPageViewControllerDelegate,UIPageViewControll
         return NSNotFound
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+  public  func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
      
         return previourOf(vc: viewController)
     }
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+ public   func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
        
         
         return nextOf(vc: viewController)
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+  public  func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
         if let will = pendingViewControllers.first {
             let index =  indexOf(vc: will)
 

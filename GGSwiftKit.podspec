@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "GGSwiftKit"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "GGSwiftKit.提供一些简单的swift工具"
   s.description  = <<-DESC
 为大家提供一些方便，里面包含一些常用的控件，将不断的完善
